@@ -112,3 +112,5 @@ TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 TARGET_TOUCHBOOST_FREQUENCY:= 1200
 
 -include vendor/lge/hammerhead/BoardConfigVendor.mk
+
+BOARD_SUPPRESS_SECURE_ERASE := true
