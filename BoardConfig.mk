@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2013 The Android Open-Source Project
+# Copyright (C) 2014 IllusionRom 
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +15,21 @@
 # limitations under the License.
 #
 
+TARGET_GLOBAL_CFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon-vfpv4 -mfloat-abi=softfp
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
+
+# Kernel building
+TARGET_KERNEL_CUSTOM_LINARO_TOOLCHAIN := boosted-4.7/bin/arm-eabi-
+TARGET_KERNEL_SOURCE := kernel/lge/hammerhead
+TARGET_KERNEL_CONFIG := uber2_hammerhead_defconfig
+TARGET_VARIANT_CONFIG := uber2_hammerhead_defconfig
+TARGET_SELINUX_CONFIG := uber2_hammerhead_defconfig
 
 # Krait optimizations
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
