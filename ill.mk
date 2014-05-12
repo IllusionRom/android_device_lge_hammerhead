@@ -53,4 +53,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # bootanimation
 PRODUCT_COPY_FILES += \
-        vendor/illusion/bootanimation/Illusion1080x1080.zip:system/media/bootanimation.zip
+        vendor/illusion/bootanimation/1080x1920.zip:system/media/bootanimation.zip
